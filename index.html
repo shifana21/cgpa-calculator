@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your semester GPA and CGPA easily with this student calculator.">
+  <title>GradeMate | GPA & CGPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="brand">Grade<span>Mate.</span></a>
+    <span class="top-label">STUDENT ACADEMIC TOOL</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">YOUR ACADEMIC COMPANION</span>
+      <h1>Calculate your <span>CGPA</span></h1>
+      <p>Track your grades, understand your performance, and plan your next semester.</p>
+    </section>
+
+    <section class="summary-grid">
+      <article class="summary-card">
+        <span>Overall CGPA</span>
+        <strong id="cgpa">0.00</strong>
+        <small>All entered subjects</small>
+      </article>
+      <article class="summary-card">
+        <span>Semester GPA</span>
+        <strong id="gpa">0.00</strong>
+        <small id="semester-label">Semester 1</small>
+      </article>
+      <article class="summary-card">
+        <span>Total Credits</span>
+        <strong id="credits">0</strong>
+        <small>Credits entered</small>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <h2>Subject details</h2>
+          <p>Add your subjects, grade points, and credits below.</p>
+        </div>
+        <label class="semester-control">
+          Semester
+          <select id="semester">
+            <option value="1">Semester 1</option>
+            <option value="2">Semester 2</option>
+            <option value="3">Semester 3</option>
+            <option value="4">Semester 4</option>
+            <option value="5">Semester 5</option>
+            <option value="6">Semester 6</option>
+            <option value="7">Semester 7</option>
+            <option value="8">Semester 8</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Subject name</th>
+              <th>Grade point</th>
+              <th>Credits</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="subject-list"></tbody>
+        </table>
+      </div>
+
+      <div class="actions">
+        <button id="add-subject" class="btn btn-secondary" type="button">+ Add subject</button>
+        <button id="calculate" class="btn btn-primary" type="button">Calculate GPA & CGPA</button>
+      </div>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="formula-card">
+      <h2>How is your GPA calculated?</h2>
+      <p>GPA = Sum of (Grade Point × Credits) ÷ Total Credits</p>
+      <p class="formula-note">CGPA is calculated using all entered subjects, weighted by their credits. Select a semester to view its GPA.</p>
+    </section>
+
+    <footer>
+      <p>GradeMate · Built for students, with care.</p>
+      <p>Use your college's official grading rules for accurate results.</p>
+    </footer>
+  </main>
+</body>
+</html>
